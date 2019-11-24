@@ -1,0 +1,17 @@
+.Tile{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+.white {
+    background: lightgray;
+}
+.gray {
+    background: grey;
+}
+.bomb {
+    background: crimson;
+}

@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Tiles from "./components/Tiles/Tiles";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state= {
+    tiles: [false,false,false,false,false,false,false,false,false,false,false,false,
+            false,false,false,false,false,false,false,false,false,false,false,false,
+            false,false,false,false,false,false,false,false,false,false,false,false,],
+    randomTileNum: Math.floor(Math.random() * 36),
+  };
+  openTile = index => {
+    const tiles = [...this.state.tiles];
+    const mine = this.state.randomTileNum;
+    tiles[index] = true;
+
+    if(index === mine) {
+      console.log('Found!');
+      tiles[index] = 'bomb';
+    }
+    this.setState({tiles});
+
+  };
+
+  render() {
+    return (
+      <Tiles tiles={this.state.tiles}
+             openTile={this.openTile}
+      />
+    );
+  }
 }
 
 export default App;
