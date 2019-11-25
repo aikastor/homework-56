@@ -2,16 +2,16 @@
     display: inline-block;
     height: 40px;
     width: 40px;
-    border: 1px solid red;
-    margin: 0;
+    border: 1px solid floralwhite;
+    margin: 2px;
     padding: 0;
 }
 .white {
-    background: lightgray;
+    background: greenyellow;
 }
 .gray {
     background: grey;
 }
 .bomb {
-    background: crimson;
+    background-image: url("../../assets/bomb.gif");
 }
