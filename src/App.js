@@ -38,14 +38,7 @@ class App extends Component {
     let tiles = [...this.state.tiles].map(tile => {
       return tile = false;
     });
-    let randomTileNum = this.state.randomTileNum;
-        randomTileNum = Math.floor(Math.random() * 36);
-    let bombFound = this.state.bombFound;
-        bombFound = false;
-    let tries = this.state.tries;
-        tries = 0;
-    console.log(tiles);
-    this.setState({tiles, randomTileNum, bombFound, tries});
+    this.setState({tiles, randomTileNum: Math.floor(Math.random() * 36), bombFound: false, tries: 0});
   };
   render() {
     return (
