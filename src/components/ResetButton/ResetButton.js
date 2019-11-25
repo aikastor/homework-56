@@ -1,11 +1,12 @@
 import React from 'react';
+import './ResetButton.css';
 
 const ResetButton = (props) => {
   return (
-    <button className='ResetButton'
-            onClick={props.onClick}>
-      Reset
-    </button>
+    <div className='buttonContainer'
+         onClick={props.onClick}>
+      <button>RESET GAME</button>
+    </div>
   );
 };
 
